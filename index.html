@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Aneeb Afzal — Security</title>
+<meta name="description" content="Portfolio of Aneeb Afzal, SecOps Engineer and SOC operations specialist based in Doha, Qatar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="net"></canvas>
+<div class="glow a"></div>
+<div class="glow b"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">~/<span id="logoName"></span><span>_</span></a>
+    <div class="links" id="links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#certs">certs</a>
+      <a href="#experience">experience</a>
+      <a href="#terminal">terminal</a>
+      <a href="#contact">contact</a>
+    </div>
+    <div class="nav-btns">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☀</button>
+      <button class="theme-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag"><span class="dot"></span><span id="status"></span></div>
+        <h1>Hi, I'm <span class="glitch grad" id="heroName" data-text=""></span>.</h1>
+        <div class="typed">&gt; <b id="typed"></b><span class="caret"></span></div>
+        <p class="tagline" id="tagline"></p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">view_work()</a>
+          <a href="#terminal" class="btn">open_terminal</a>
+          <a href="#" class="btn" id="cvBtn">download_cv ↓</a>
+        </div>
+      </div>
+      <div class="shield-box">
+        <div class="ring r1"><i></i></div>
+        <div class="ring r2"><i></i></div>
+        <svg class="shield" viewBox="0 0 200 230" fill="none">
+          <defs>
+            <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--green)"/>
+              <stop offset="1" stop-color="var(--cyan)"/>
+            </linearGradient>
+            <clipPath id="sc"><path d="M100 8 L184 40 V110 C184 165 145 205 100 222 C55 205 16 165 16 110 V40 Z"/></clipPath>
+          </defs>
+          <path d="M100 8 L184 40 V110 C184 165 145 205 100 222 C55 205 16 165 16 110 V40 Z" fill="url(#sg)" fill-opacity=".1" stroke="url(#sg)" stroke-width="3"/>
+          <g clip-path="url(#sc)">
+            <rect class="scan" x="0" y="30" width="200" height="4" fill="var(--green)" opacity=".8"/>
+          </g>
+          <rect x="72" y="100" width="56" height="46" rx="8" stroke="url(#sg)" stroke-width="4"/>
+          <path d="M82 100 V84 a18 18 0 0 1 36 0 V100" stroke="url(#sg)" stroke-width="4"/>
+          <circle cx="100" cy="120" r="6" fill="var(--green)"/>
+          <path d="M100 126 V134" stroke="var(--green)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">01 // whoami</div><h2>About me</h2></div>
+      <div class="about-grid">
+        <div class="card reveal" id="aboutText"></div>
+        <div class="stats reveal" id="stats"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">02 // capabilities</div><h2>Skills &amp; arsenal</h2><p>Detection, response and cloud security operations.</p></div>
+      <div class="skills-grid" id="skillsGrid"></div>
+      <div class="chips reveal" id="tools"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">03 // ops</div><h2>Key work</h2><p>Selected work from the SOC and the cloud.</p></div>
+      <div class="filters reveal" id="filters">
+        <button class="on" data-f="all">all</button>
+        <button data-f="blue">detection</button>
+        <button data-f="tool">engineering</button>
+        <button data-f="red">leadership</button>
+      </div>
+      <div class="proj-grid" id="projGrid"></div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section id="certs">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">04 // credentials</div><h2>Certifications</h2></div>
+      <div class="certs" id="certGrid"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">05 // log</div><h2>Experience &amp; education</h2></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- TERMINAL -->
+  <section id="terminal">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="num">06 // shell</div><h2>Try the terminal</h2><p>Type <code class="hl">help</code> to explore this portfolio from the command line.</p></div>
+      <div class="term reveal">
+        <div class="term-bar"><i></i><i></i><i></i><span id="termTitle"></span></div>
+        <div class="term-body" id="termBody">
+          <div id="termOut"></div>
+          <div class="term-input"><span class="p" id="prompt"></span><input id="termIn" autocomplete="off" spellcheck="false" aria-label="Terminal input"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap reveal">
+      <div class="sec-head flush"><div class="num">07 // handshake</div></div>
+      <h2>Let's <span class="grad">secure</span> something.</h2>
+      <p>Happy to talk SecOps, detection engineering, incident response — or just a good chat about threats.</p>
+      <button class="btn primary" id="emailBtn">copy_email()</button>
+      <div class="socials" id="socials"></div>
+    </div>
+  </section>
+</main>
+
+<footer><span id="foot"></span></footer>
+<div class="toast" id="toast"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
